@@ -1,20 +1,18 @@
-from abc import ABC
-
 from rest_framework import serializers
-from flight_app.models import Flight, Passenger,Reservation
+from flight_app.models import Flight, Passenger, Reservation
 
 
-class FlightSerializer(serializers.Serializer):
+class FlightSerializer(serializers.ModelSerializer):
     class Meta:
         model = Flight
         fields = '__all__'
 
-class PassengerSerializer(serializers.Serializer):
+class PassengerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Passenger
         fields = '__all__'
 
-class ReservationSerializer(serializers.Serializer):
+class ReservationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reservation
         fields = '__all__'
