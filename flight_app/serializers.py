@@ -1,5 +1,8 @@
+from abc import ABC
+
 from rest_framework import serializers
 from flight_app.models import Flight, Passenger,Reservation
+
 
 class FlightSerializer(serializers.Serializer):
     class Meta:
